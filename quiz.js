@@ -1,3 +1,4 @@
+
 const questions = [
   {
     question: "When was Tagger founded?",
@@ -41,6 +42,10 @@ const questions = [
   }
   }
 ];
+const quizContainer = document.getElementById('quiz');
+const resultsContainer = document.getElementById('results');
+const submitButton = document.getElementById('submit');
+
 
 function buildQuiz(){
   const output=[];
@@ -61,5 +66,30 @@ function buildQuiz(){
       );
   }
 );
-quizContainer.innerHTML = output.join('');
+  quizContainer.innerHTML = output.join('');
 }
+
+
+function showResults(){
+   const answerContainers = quizContainer.querySelectorAll('.answers');
+   let numCorrect = 0;
+   myQuestions.forEach( (currentQ, qNum) => {
+     const answerContainer = answerContainers[qNum];
+    const selector = `input[name=question${qNum}]:checked`;
+    const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+    if(userAnswer === currentQ.correctAnswer){
+      numCorrect++;
+      answerContainers[qNum].style.color = 'lightgreen';
+    }
+    else{
+      answerContainers[qNum].style.color = 'red';
+    }
+  });
+  resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+}
+
+
+}
+
+buildQuiz();
+submitButton.addEventListener('click', showResults);
