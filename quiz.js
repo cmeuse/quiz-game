@@ -44,7 +44,7 @@ const questions = [
 
 function buildQuiz(){
   const output=[];
-  questions.forEach(currentQ, qNum) => {
+  questions.forEach((currentQ, qNum) => {
     const answers = [];
     for(letter in curretQ.answers){
       answers.push(
@@ -55,5 +55,11 @@ function buildQuiz(){
          </label>`
        );
     }
+    output.push(
+        `<div class="question"> ${currentQuestion.question} </div>
+        <div class="answers"> ${answers.join('')} </div>`
+      );
   }
+);
+quizContainer.innerHTML = output.join('');
 }
