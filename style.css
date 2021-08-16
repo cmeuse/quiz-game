@@ -1,5 +1,5 @@
 body {
-    background: #413D3D;
+    background:url (data:https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.taggermedia.com%2Fassets%2Fimg%2Fog-image.png&imgrefurl=https%3A%2F%2Fwww.taggermedia.com%2F&tbnid=aissUigtDWtiPM&vet=12ahUKEwikidDcgbbyAhUKiZ4KHXgDCQYQMygEegUIARCwAQ..i&docid=xnM9xqDLAcpbtM&w=1200&h=1200&q=tagger%20media&client=safari&ved=2ahUKEwikidDcgbbyAhUKiZ4KHXgDCQYQMygEegUIARCwAQ) no-repeat center center;
 }
  
 .grid {
@@ -14,11 +14,9 @@ body {
  
 .grid h1 {
     font-family: "Roboto", sans-serif;
-    background: url (data:https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.taggermedia.com%2Fassets%2Fimg%2Fog-image.png&imgrefurl=https%3A%2F%2Fwww.taggermedia.com%2F&tbnid=aissUigtDWtiPM&vet=12ahUKEwikidDcgbbyAhUKiZ4KHXgDCQYQMygEegUIARCwAQ..i&docid=xnM9xqDLAcpbtM&w=1200&h=1200&q=tagger%20media&client=safari&ved=2ahUKEwikidDcgbbyAhUKiZ4KHXgDCQYQMygEegUIARCwAQ) no-repeat center center;
-   background-size: cover;
-     height: 300px;
     font-size: 60px;
     text-align: center;
+    background-color: #01BBFF;
     color: #ffffff;
     padding: 2px 0px;
     
