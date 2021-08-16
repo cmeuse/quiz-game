@@ -7,11 +7,12 @@ body {
   margin-left: auto;
   margin-right: auto;
     height: 100px;
+    width: 500px;
 }
  
 .grid {
     width: 1000px;
-    height: 500px;
+    height: 550px;
     margin: 0 auto;
     background-color: #fff;
     padding: 10px 50px 50px 50px;
