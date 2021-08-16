@@ -1,5 +1,5 @@
 body {
-    background:url (data: https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.taggermedia.com%2Fassets%2Fimg%2Fog-image.png&imgrefurl=https%3A%2F%2Fwww.taggermedia.com%2F&tbnid=aissUigtDWtiPM&vet=12ahUKEwikidDcgbbyAhUKiZ4KHXgDCQYQMygEegUIARCwAQ..i&docid=xnM9xqDLAcpbtM&w=1200&h=1200&q=tagger%20media&client=safari&ved=2ahUKEwikidDcgbbyAhUKiZ4KHXgDCQYQMygEegUIARCwAQ) no-repeat center center;
+    background-color: #413D3D;
     
 }
  
@@ -37,6 +37,7 @@ body {
  
 .buttons {
     margin-top: 30px;
+      text-align: center;
 }
  
 #btn0, #btn1, #btn2, #btn3 {
@@ -45,7 +46,6 @@ body {
   padding: 10px 40px;
   text-decoration: none; 
   transition: background .5s; 
-  text-align: center;
 }
  
 #btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover {
