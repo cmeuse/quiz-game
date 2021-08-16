@@ -1,95 +1,94 @@
-(function(){
-
-function buildQuiz(){
-  const output=[];
-  questions.forEach((currentQ, qNum) => {
-    const answers = [];
-    for(letter in curretQ.answers){
-      answers.push(
-         `<label>
-           <input type="radio" name="question${qNum}" value="${letter}">
-           ${letter} :
-           ${currentQ.answers[letter]}
-         </label>`
-       );
-    }
-    output.push(
-        `<div class="question"> ${currentQ.question} </div>
-        <div class="answers"> ${answers.join('')} </div>`
-      );
-  }
-);
-  quizContainer.innerHTML = output.join('');
+function Quiz(questions) {
+    this.score = 0;
+    this.questions = questions;
+    this.questionIndex = 0;
 }
-
-
-function showResults(){
-   const answerContainers = quizContainer.querySelectorAll('.answers');
-   let numCorrect = 0;
-   questions.forEach( (currentQ, qNum) => {
-     const answerContainer = answerContainers[qNum];
-    const selector = `input[name=question${qNum}]:checked`;
-    const userAnswer = (answerContainer.querySelector(selector) || {}).value;
-    if(userAnswer === currentQ.correctAnswer){
-      numCorrect++;
-      answerContainers[qNum].style.color = 'lightgreen';
-    }
-    else{
-      answerContainers[qNum].style.color = 'red';
-    }
-  });
-  resultsContainer.innerHTML = `${numCorrect} out of ${questions.length}`;
+ 
+Quiz.prototype.getQuestionIndex = function() {
+    return this.questions[this.questionIndex];
 }
-
-const quizContainer = document.getElementById('quiz');
-const resultsContainer = document.getElementById('results');
-const submitButton = document.getElementById('submit');
-const questions = [
-  {
-    question: "When was Tagger founded?",
-    answers: {
-      a: "2011",
-      b: "2015",
-      c: "2007",
-      d: "2019"
-    },
-    correctAnswer: "c"
-  },
-  {
-    question: "How many different offices does Tagger have?",
-    answers: {
-      a: "4",
-      b: "7",
-      c: "20",
-      d: "13"
-    },
-    correctAnswer: "d"
-  },
-  {
-    question: "Who is the founder?",
-    answers: {
-      a: "Dave Dickman",
-      b: "Pete Kennedy",
-      c: "Sami Joseph",
-      d: "Kate Danielson"
-    },
-    correctAnswer: "b"
-  },
-  {
-    question: "How many influencers are on the platform",
-    answers: {
-      a: "3,000,000",
-      b: "1,000,000",
-      c: "6,000,000",
-      d: "8,000,000"
-    },
-    correctAnswer: "c"
-  }
-  }
+ 
+Quiz.prototype.guess = function(answer) {
+    if(this.getQuestionIndex().isCorrectAnswer(answer)) {
+        this.score++;
+    }
+ 
+    this.questionIndex++;
+}
+ 
+Quiz.prototype.isEnded = function() {
+    return this.questionIndex === this.questions.length;
+}
+ 
+ 
+function Question(text, choices, answer) {
+    this.text = text;
+    this.choices = choices;
+    this.answer = answer;
+}
+ 
+Question.prototype.isCorrectAnswer = function(choice) {
+    return this.answer === choice;
+}
+ 
+ 
+function populate() {
+    if(quiz.isEnded()) {
+        showScores();
+    }
+    else {
+        // show question
+        var element = document.getElementById("question");
+        element.innerHTML = quiz.getQuestionIndex().text;
+ 
+        // show options
+        var choices = quiz.getQuestionIndex().choices;
+        for(var i = 0; i < choices.length; i++) {
+            var element = document.getElementById("choice" + i);
+            element.innerHTML = choices[i];
+            guess("btn" + i, choices[i]);
+        }
+ 
+        showProgress();
+    }
+};
+ 
+function guess(id, guess) {
+    var button = document.getElementById(id);
+    button.onclick = function() {
+        quiz.guess(guess);
+        populate();
+    }
+};
+ 
+ 
+function showProgress() {
+    var currentQuestionNumber = quiz.questionIndex + 1;
+    var element = document.getElementById("progress");
+    element.innerHTML = "Question " + currentQuestionNumber + " of " + quiz.questions.length;
+};
+ 
+function showScores() {
+    var gameOverHTML = "<h1>Result</h1>";
+    gameOverHTML += "<h2 id='score'> Your scores: " + quiz.score + "</h2>";
+    var element = document.getElementById("quiz");
+    element.innerHTML = gameOverHTML;
+};
+ 
+// create questions here
+var questions = [
+    new Question( "When was Tagger founded?", ["2011", "2015","2007", "2019"], "2015"),
+    new Question("How many different offices does Tagger have?", ["4", "7", "20", "13"], "13"),
+    new Question("Who is the founder of Tagger?", ["Dave Dickman", "Pete Kennedy","Sami Joseph", "Kate Danielson"], "Pete Kennedy"),
+    new Question("Which is used for Connect To Database?", ["PHP", "HTML", "JS", "All"], "PHP"),
+    new Question("How many influencers are on the platform?", ["3,000,000", "1,000,000", "6,000,000", "8,000,000"], "6,000,000")
 ];
+ 
+// create quiz
+var quiz = new Quiz(questions);
+ 
+// display quiz
+populate();
 
+  
 
-
-buildQuiz();
-submitButton.addEventListener('click', showResults);
-}
