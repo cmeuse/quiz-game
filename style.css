@@ -1,4 +1,14 @@
 body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 940px; 
+  padding: 0 10px;
+}
+body {
     background-color: #413D3D;
 }
  
