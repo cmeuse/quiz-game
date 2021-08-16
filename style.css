@@ -4,7 +4,7 @@ body {
 }
 .tagger {
     text-align: center;
-    height: 100px;
+    height: 70px;
 }
  
 .grid {
@@ -21,7 +21,7 @@ body {
     font-family: "Roboto", sans-serif;
     font-size: 60px;
     text-align: center;
-    background-color: #01BBFF;
+    background-color: #3f56cc;
     color: #ffffff;
     padding: 2px 0px;
     
@@ -29,7 +29,7 @@ body {
  
 #score {
     font-family: "Roboto", sans-serif;
-    color: #01BBFF;
+    color: #3f56cc;
     text-align: center;
     font-size: 30px;
 }
@@ -37,7 +37,7 @@ body {
 .grid #question {
     font-family: "Roboto", sans-serif;
     font-size: 30px;
-    color: #01BBFF;
+    color: #3f56cc;
     text-align: center;
 }
  
@@ -57,7 +57,7 @@ body {
  
 #btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover {
     cursor: pointer;
-    background-color: #01BBFF;
+    background-color: #3f56cc;
 }
  
 #btn0:focus, #btn1:focus, #btn2:focus, #btn3:focus {
