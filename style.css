@@ -45,7 +45,7 @@ body {
 #btn0, #btn1, #btn2, #btn3 {
   color: #fff;
   background: #000;
-  padding: 10px 40px;
+  padding: 30px 50px;
   text-decoration: none; 
   font-family: "Roboto", sans-serif;
   transition: background .5s; 
