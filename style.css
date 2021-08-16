@@ -24,6 +24,7 @@ body {
 }
  
 #score {
+    font-family: "Roboto", sans-serif;
     color: #01BBFF;
     text-align: center;
     font-size: 30px;
@@ -33,6 +34,7 @@ body {
     font-family: "Roboto", sans-serif;
     font-size: 30px;
     color: #01BBFF;
+    text-align: center;
 }
  
 .buttons {
@@ -45,6 +47,7 @@ body {
   background: #000;
   padding: 10px 40px;
   text-decoration: none; 
+  font-family: "Roboto", sans-serif;
   transition: background .5s; 
 }
  
