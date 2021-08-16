@@ -1,10 +1,11 @@
 body {
-    background:url (data:https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.taggermedia.com%2Fassets%2Fimg%2Fog-image.png&imgrefurl=https%3A%2F%2Fwww.taggermedia.com%2F&tbnid=aissUigtDWtiPM&vet=12ahUKEwikidDcgbbyAhUKiZ4KHXgDCQYQMygEegUIARCwAQ..i&docid=xnM9xqDLAcpbtM&w=1200&h=1200&q=tagger%20media&client=safari&ved=2ahUKEwikidDcgbbyAhUKiZ4KHXgDCQYQMygEegUIARCwAQ) no-repeat center center;
+    background:url (data: https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.taggermedia.com%2Fassets%2Fimg%2Fog-image.png&imgrefurl=https%3A%2F%2Fwww.taggermedia.com%2F&tbnid=aissUigtDWtiPM&vet=12ahUKEwikidDcgbbyAhUKiZ4KHXgDCQYQMygEegUIARCwAQ..i&docid=xnM9xqDLAcpbtM&w=1200&h=1200&q=tagger%20media&client=safari&ved=2ahUKEwikidDcgbbyAhUKiZ4KHXgDCQYQMygEegUIARCwAQ) no-repeat center center;
+    
 }
  
 .grid {
-    width: 600px;
-    height: 500px;
+    width: 1000px;
+    height: 900px;
     margin: 0 auto;
     background-color: #fff;
     padding: 10px 50px 50px 50px;
