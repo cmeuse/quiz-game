@@ -1,28 +1,61 @@
-body{
-	font-size: 20px;
-	font-family: sans-serif;
-	color: #333;
+body {
+    background-color: #413D3D;
 }
-.question{
-	font-weight: 600;
+ 
+.grid {
+    width: 600px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 10px 50px 50px 50px;
+    border: 2px solid #cbcbcb;
+    
 }
-.answers {
-  margin-bottom: 20px;
+ 
+.grid h1 {
+    font-family: "sans-serif";
+    background-color: #01BBFF;
+    font-size: 60px;
+    text-align: center;
+    color: #ffffff;
+    padding: 2px 0px;
+    
 }
-.answers label{
-  display: block;
+ 
+#score {
+    color: #01BBFF;
+    text-align: center;
+    font-size: 30px;
 }
-#submit{
-	font-family: sans-serif;
-	font-size: 20px;
-	background-color: #279;
-	color: #fff;
-	border: 0px;
-	border-radius: 3px;
-	padding: 20px;
-	cursor: pointer;
-	margin-bottom: 20px;
+ 
+.grid #question {
+    font-family: "monospace";
+    font-size: 30px;
+    color: #01BBFF;
 }
-#submit:hover{
-	background-color: #38a;
+ 
+.buttons {
+    margin-top: 30px;
+}
+ 
+#btn0, #btn1, #btn2, #btn3 {
+  color: #fff;
+  background: #000;
+  padding: 10px 40px;
+  text-decoration: none; 
+  transition: background .5s; 
+}
+ 
+#btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover {
+    cursor: pointer;
+    background-color: #01BBFF;
+}
+ 
+#btn0:focus, #btn1:focus, #btn2:focus, #btn3:focus {
+    outline: 0;
+}
+ 
+#progress {
+    color: #2b2b2b;
+    font-size: 18px;
 }
