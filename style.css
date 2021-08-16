@@ -2,10 +2,14 @@ body {
     background-color: #413D3D;
     
 }
+.tagger {
+    text-align: center;
+    height: 100px;
+}
  
 .grid {
     width: 1000px;
-    height: 500px;
+    height: 700px;
     margin: 0 auto;
     background-color: #fff;
     padding: 10px 50px 50px 50px;
