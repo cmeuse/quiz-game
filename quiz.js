@@ -80,7 +80,7 @@ var questions = [
     new Question( "When was Tagger founded?", ["2011", "2015","2007", "2019"], "2015"),
     new Question("How many different offices does Tagger have?", ["4", "7", "20", "13"], "13"),
     new Question("Who is the founder of Tagger?", ["Dave Dickman", "Pete Kennedy","Sami Joseph", "Kate Danielson"], "Pete Kennedy"),
-    new Question("Which is used for Connect To Database?", ["PHP", "HTML", "JS", "All"], "PHP"),
+    new Question("Where is the Tagger headquarters?", ["Sanat Monica", "New York City", "Singapore", "London"], "Santa Monica"),
     new Question("How many influencers are on the platform?", ["3,000,000", "1,000,000", "6,000,000", "8,000,000"], "6,000,000")
 ];
  
