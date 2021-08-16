@@ -5,7 +5,7 @@ body {
  
 .grid {
     width: 1000px;
-    height: 900px;
+    height: 500px;
     margin: 0 auto;
     background-color: #fff;
     padding: 10px 50px 50px 50px;
@@ -38,7 +38,7 @@ body {
 }
  
 .buttons {
-    margin-top: 30px;
+    margin-top: 50px;
       text-align: center;
 }
  
