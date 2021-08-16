@@ -70,7 +70,7 @@ function showProgress() {
  
 function showScores() {
     var gameOverHTML = "<h1>Result</h1>";
-    var percent = (quiz.score/quiz.questions) * 100;
+    let percent = (quiz.score/quiz.questions.length) * 100;
     gameOverHTML += "<h2 id='score'> Your score: " + quiz.percent + "% </h2>";
     var element = document.getElementById("quiz");
     element.innerHTML = gameOverHTML;
