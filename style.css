@@ -45,6 +45,7 @@ body {
   padding: 10px 40px;
   text-decoration: none; 
   transition: background .5s; 
+  text-align: center;
 }
  
 #btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover {
